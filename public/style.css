@@ -1,0 +1,43 @@
+body {background: #F8F8F8; font-family: Roboto; min-height:100%; position: relative;}
+h3 {font-weight: 400; margin: 0 0 30px 0; font-size: 20px;}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
+
+#block {display:inline-block; vertical-align: top;}
+.index {background: #FFF; box-shadow: 0 2px 5px #D9D9D9; padding:20px 40px; margin-top: 50px;}
+.index p {font-size:56px; font-weight:300;}
+.index p a:hover {text-decoration:none; color:#FFF;}
+
+.plus {margin-bottom: 25px; display:none;}
+
+.more {margin-top: -3px; background: #1976D2; box-shadow: 0 1px 3px #B6B6B6; font-size: 9px; color:#FFF; padding:10px 10px 10px 11px; border-radius: 20px;}
+.more:hover {cursor:pointer; background: #1E88E5;}
+
+.input2 {border:none; border-bottom: 1px solid #E6E6E6; background: none; width:100%;}
+.input2:focus {border: none; outline:none; border-bottom: 1px solid #3F51B5;} 
+
+.btn2 {background: none; color:#FFF; border: none; border-radius: 2px; box-shadow: 0 1px 3px #B6B6B6; padding:4px 10px; margin:0 5px;}
+.btn2:hover {box-shadow: 0 0 7px #B6B6B6}
+.btn2-primary {background: #2196F3;} 
+.btn2-primary:hover {} 
+.btn2-danger {background: #FF5252;}
+
+.edit i {color:#DCDCDC; font-size:13px; margin: 0 5px 0 5px; opacity:0;}
+.edit i:hover {color:#696969; cursor:pointer;}
+
+#menu {border: none; border-radius: 0; background: #1976D2; box-shadow: 0 2px 5px #013683;}
+#menu a {color: #FFF;}
+
+.white {background: #FFF; box-shadow: 0 2px 5px #D9D9D9; width:100%;}
+.white tr:first-child {border-top: none;}
+.white tr td:first-child {font-weight: 500;}
+.white tr:hover td i {opacity: 1; transition: all 0.2s ease;}
+.show {width:100% display:table;}
+
+.enter {background: #FFF; box-shadow: 0 2px 5px #D9D9D9; padding:20px; margin-top: 50px;}
+
+.enter span.error {font-size:12px;}
+
+.content {}
+
+footer {background: #263238; color: #8D9497; position:absolute; bottom: 0; width:100%; padding:15px 0; margin-top: 40px;}
+footer p {text-align:center; font-size:15px;}
