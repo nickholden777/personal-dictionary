@@ -13,17 +13,15 @@ class LangController extends Controller
     public function lang($slug, Request $request)
     {
     	$words = Language::where('user_id', Auth::user()->id)
-    						->where('lang', $slug)->get();	
+    						->where('lang', $slug)->get();
 	    $nouns = $words->where('part', 1);
 	    $verbs = $words->where('part', 2);
 	    $sub = $words->where('part', 3);
-	    $numbers = $words->where('part', 4);	
+	    $numbers = $words->where('part', 4);
 	    $days = $words->where('part', 5);
 	    $colors = $words->where('part', 6);
 	    $sentences = $words->where('part', 7);
 	    $times = $words->where('part', 8);
-
-	    //dd($numbers);
 
     	return view('pages.lang', compact('nouns', 'verbs', 'sub', 'numbers', 'days', 'colors', 'sentences', 'times'));
     }

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="col-md-4 col-md-offset-4 enter">
-	<h3><i class="glyphicon glyphicon-option-vertical"></i> Sign in</h3>
+	<h3><i class="fa fa-ellipsis-v" aria-hidden="true"></i> Sign in</h3>
 	@if($errors)
 		<p class="error">{{ $errors->first() }}</p>
 	@endif

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="col-md-4 col-md-offset-4 enter">
-	<h3><i class="glyphicon glyphicon-option-vertical"></i> Sign up</h3>
+	<h3><i class="fa fa-ellipsis-v" aria-hidden="true"></i> Sign up</h3>
 	<form action="{{ route('reg') }}" method="POST">
 		{{ csrf_field() }}
 		<div class="form-group clearfix {{ $errors->has('email') ? 'has-error' : '' }}">

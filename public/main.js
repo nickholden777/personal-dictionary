@@ -1,7 +1,18 @@
 window.onload = function() {
 
-	if ($(document).height() <= $(window).height())
-  		$("footer").addClass("navbar-fixed-bottom");
+	/*=================ADD NEW PART=====================*/
+
+	$('#newPart').click(function() {
+		$('.subMenu').toggleClass('switch');
+
+		$('a').click(function() {
+			var part = $(this).attr('class');
+			$('#' + part).removeClass('displayHide');
+			$('#' + part).addClass('displayShow');
+		});
+	});
+
+	/*=================WORDS OPERATIONS=====================*/
 
 	$('.more').click(function() {
 		var aid = this.id;
@@ -17,7 +28,7 @@ window.onload = function() {
 		$('#add_' + id).css('display', 'block');
 
 		$('#add_' + id).click(function() {
-		
+
 			var field1 = $('#field1_' + id).val();
 			var field2 = $('#field2_' + id).val();
 
@@ -26,9 +37,9 @@ window.onload = function() {
 			}
 
 			var tr = document.createElement('tr');
-			tr.innerHTML = '<td>' + field1 + '</td>' + 
-							'<td></td>' + 
-							'<td class="text-right">' + field2 + '</td>';
+			tr.innerHTML = '<td>' + field1 + '</td>' +
+							'<td></td>' +
+							'<td class="text-xs-right">' + field2 + '</td>';
 
 			$('#here_' + id).append(tr);
 
@@ -51,9 +62,7 @@ window.onload = function() {
         			console.log(errors);
 				}
 			});
-
 		});
-
 	});
 
 	$('.delete').click(function() {
@@ -75,7 +84,6 @@ window.onload = function() {
         		console.log(errors);
 			}
 		});
-
 	});
 
 	$('.change').click(function() {

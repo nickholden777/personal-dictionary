@@ -1,29 +1,22 @@
-<nav class="navbar navbar-default" id="menu">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Home</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<nav class="navbar" id="menu">
+  <a class="navbar-brand logo" href="/"><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></a>
+  <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+    &#9776;
+  </button>
+  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+    @if(Auth::user())
+    <ul class="nav navbar-nav">
+      <li class="nav-item"><a href="/english" class="nav-link"><i class="fa fa-folder-open" aria-hidden="true"></i> English</a></li>
+      <li class="nav-item"><a href="/spanish" class="nav-link"><i class="fa fa-folder-open" aria-hidden="true"></i> Spanish</a></li>
+    </ul>
+    @endif
+    <ul class="nav navbar-nav pull-sm-right">
       @if(Auth::user())
-        <ul class="nav navbar-nav">
-          <li><a href="/english">English</a></li>
-          <li><a href="/spanish">Spanish</a></li>
-        </ul>
-      @endif
-      <ul class="nav navbar-nav navbar-right">
-        @if(Auth::user())
-          <li><a href="{{ route('logout') }}"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+          <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link"><i class="fa fa-power-off"></i> Logout</a></li>
         @else
-           <li><a href="{{ route('login') }}"><i class="glyphicon glyphicon-share"></i> Sign in</a></li>
-          <li><a href="{{ route('reg') }}"><i class="glyphicon glyphicon-lock"></i> Sign up</a></li>
+           <li class="nav-item"><a href="{{ route('login') }}" class="nav-link"><i class="fa fa-male" aria-hidden="true"></i> Sign in</a></li>
+          <li class="nav-item"><a href="{{ route('reg') }}" class="nav-link"><i class="fa fa-lock" aria-hidden="true"></i> Sign up</a></li>
         @endif
-      </ul>
-    </div>
+    </ul>
   </div>
 </nav>
